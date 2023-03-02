@@ -54,6 +54,7 @@ public class WiseSayingController {
 
         if(wiseSaying == null){
             System.out.printf("%d번 명언은 존재하지 않습니다.\n", id);
+            return;
         }
         // 찾은 명언객체를 리스트에서 제거
         wiseSayings.remove(wiseSaying);
@@ -92,7 +93,7 @@ public class WiseSayingController {
         String authorName = Container.getScanner().nextLine().trim();
 
         wiseSaying.setContent(content);
-        wiseSaying.setAuthorName(content);
+        wiseSaying.setAuthorName(authorName);
 
         System.out.printf("%d번 명언이 수정되었습니다.\n", id);
     }
